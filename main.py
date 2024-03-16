@@ -79,7 +79,7 @@ class TextIsGone:
         # Generate linearly spaced alpha values and map them to countdown seconds.
         alpha_lin = np.linspace(0, 1, self.sec)
         alpha_enum = enumerate(alpha_lin)
-        alpha_dict = {self.sec - i: rgb2hex((a, a, a)) for i, a in alpha_enum}
+        alpha_dict = {self.sec - i: rgb2hex((a, a, a)) for i, a in alpha_enum}  # noqa
         self.alpha_val_map = alpha_dict
 
     def increment_row(self):
